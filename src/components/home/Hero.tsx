@@ -42,28 +42,12 @@ export const Hero = () => {
           {/* Trust Badges */}
           <div className="mt-10">
             <p className="text-sm text-gray-500 mb-5">
-              Trusted by startups and businesses worldwide
+              Partnering with visionary startups and businesses globally.
             </p>
             <div className="flex flex-wrap items-center gap-8 text-gray-400 font-semibold text-sm opacity-70">
               <span className="flex items-center gap-2">
                 <span className="w-4 h-4 bg-gray-400 rounded-full inline-block"></span>{" "}
-                leafy
-              </span>
-              <span className="flex items-center gap-2">
-                <span className="w-4 h-4 bg-gray-400 rounded-sm inline-block transform rotate-45"></span>{" "}
-                NEXORA
-              </span>
-              <span className="flex items-center gap-2">
-                <span className="w-4 h-4 bg-gray-400 rounded-full inline-block"></span>{" "}
-                Shipzy
-              </span>
-              <span className="flex items-center gap-2">
-                <span className="w-4 h-4 bg-gray-400 rounded-full inline-block"></span>{" "}
-                ByteLab
-              </span>
-              <span className="flex items-center gap-2">
-                <span className="w-4 h-4 bg-gray-400 rounded-full inline-block"></span>{" "}
-                inkly
+                Unlock Wealth Digital
               </span>
             </div>
           </div>
