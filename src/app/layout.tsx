@@ -13,6 +13,18 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "Garuda Forge",
   description: "Web Development Solutions",
+  keywords: [
+    "Web Development",
+    "Next.js",
+    "Laravel",
+    "Software Team",
+    "Myanmar Developer",
+  ],
+  openGraph: {
+    title: "Garuda Forge",
+    description: "Web Development Solutions",
+    images: ["/hero-eagle.png"],
+  },
 };
 
 export default function RootLayout({
