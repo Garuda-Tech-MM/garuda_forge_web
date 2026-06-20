@@ -70,7 +70,7 @@ export const WorkPage = () => {
               className="border border-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 hover:shadow-lg transition bg-white"
             >
               <div className="h-40 sm:h-48 bg-gray-100 rounded-xl sm:rounded-2xl mb-4 sm:mb-6" />
-              <h3 className="text-lg sm:text-xl font-bold mb-1.5 sm:mb-2">
+              <h3 className="text-lg sm:text-xl font-bold mb-1.5 sm:mb-2 text-black">
                 {p.title}
               </h3>
               <p className="text-gray-500 text-sm mb-4 sm:mb-6">{p.desc}</p>

@@ -52,7 +52,7 @@ export const Navbar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative transition ${
+                className={`relative transition-colors focus-visible:text-white focus:text-white active:text-white ${
                   isActive ? "text-blue-600" : "hover:text-white"
                 }`}
               >
@@ -69,7 +69,7 @@ export const Navbar = () => {
           })}
         </div>
 
-        <button className="hidden lg:block border border-blue-300 text-white px-6 py-2 rounded-md text-sm hover:border-white transition">
+        <button className="hidden lg:block border border-blue-300 text-white px-6 py-2 rounded-md text-sm hover:border-white focus-visible:border-white active:border-white transition">
           Let&apos;s Talk →
         </button>
 
@@ -94,17 +94,17 @@ export const Navbar = () => {
                   key={item.name}
                   href={item.href}
                   onClick={() => setMenuOpen(false)}
-                  className={`px-3 py-3 rounded-lg text-sm transition ${
+                  className={`px-3 py-3 rounded-lg text-sm transition-colors focus-visible:text-white focus:text-white active:text-white ${
                     isActive
                       ? "text-blue-600 bg-blue-600/10"
-                      : "text-gray-400 hover:text-white hover:bg-white/5"
+                      : "text-gray-400 hover:text-white hover:bg-white/5 active:bg-white/10"
                   }`}
                 >
                   {item.name}
                 </Link>
               );
             })}
-            <button className="mt-4 w-full border border-blue-300 text-white px-6 py-3 rounded-md text-sm hover:border-white transition">
+            <button className="mt-4 w-full border border-blue-300 text-white px-6 py-3 rounded-md text-sm hover:border-white focus-visible:border-white active:border-white transition">
               Let&apos;s Talk →
             </button>
           </div>
