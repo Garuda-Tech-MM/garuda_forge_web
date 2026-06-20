@@ -6,12 +6,12 @@ export const ContactHero = () => {
     <section className="bg-brand-dark pt-12 sm:pt-16 md:pt-20 pb-10 sm:pb-12 md:pb-15 px-4 sm:px-6 text-white overflow-hidden">
       <div className="max-w-300 mx-auto flex flex-col md:flex-row items-center justify-between">
         <div className="md:w-1/2">
-          <span className="text-blue-500 font-bold uppercase tracking-widest text-xs mb-4 block">
+          <span className="text-[#625FFC] font-bold uppercase tracking-widest text-sm mb-4 block">
             Get In Touch
           </span>
           <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
             Let&apos;s Build Something{" "}
-            <span className="text-blue-700 h-1">Amazing</span> Together
+            <span className="text-[#625FFC] h-1">Amazing</span> Together
           </h1>
           <p className="text-gray-400 text-lg mb-12">
             Have a project in mind or need expert advice? We&apos;d love to hear
@@ -40,10 +40,10 @@ export const ContactHero = () => {
                 key={i}
                 className="flex items-center gap-3 bg-[#151921] p-4 rounded-xl border border-gray-800"
               >
-                <item.icon className="text-blue-500" />
+                <item.icon className="text-[#625FFC]" />
                 <div>
                   <p className="font-bold text-sm">{item.text}</p>
-                  <p className="text-[10px] text-gray-500">{item.sub}</p>
+                  <p className="text-[12px] text-gray-500">{item.sub}</p>
                 </div>
               </div>
             ))}

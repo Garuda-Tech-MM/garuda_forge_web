@@ -29,7 +29,7 @@ export const ContactPage = () => {
               },
             ].map((item, i) => (
               <div key={i} className="flex gap-4">
-                <item.icon className="text-blue-600" />
+                <item.icon className="text-[#625FFC]" />
                 <div>
                   <p className="font-bold text-sm">{item.label}</p>
                   <p className="text-gray-500 text-sm">{item.val}</p>
@@ -105,7 +105,7 @@ export const ContactPage = () => {
               </div>
 
               {/* Submit Button */}
-              <button className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition flex items-center gap-2">
+              <button className="bg-[#625FFC] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#4a4dc8] transition flex items-center gap-2">
                 Send Message →
               </button>
             </form>
