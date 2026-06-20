@@ -1,16 +1,16 @@
 import Image from "next/image";
 
-export const WorkHero = () => {
+export const ServicesHero = () => {
   return (
     <section className="bg-brand-dark pt-12 sm:pt-16 md:pt-20 pb-10 sm:pb-12 md:pb-15 px-4 sm:px-6 text-white overflow-hidden">
       <div className="max-w-300 mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-            Our <span className="text-[#625FFC]">Work</span>
+            Our <span className="text-[#625FFC]">Services</span>
           </h1>
           <p className="text-gray-400 text-base sm:text-lg max-w-md mx-auto md:mx-0">
-            Explore a selection of projects we&apos;ve built for startups,
-            businesses, and brands.
+            End-to-end web development services to turn your ideas into powerful
+            digital products.
           </p>
         </div>
 

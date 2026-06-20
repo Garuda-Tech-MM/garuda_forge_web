@@ -6,7 +6,7 @@ export const AboutHero = () => {
       <div className="max-w-300 mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-            About Garuda Forge
+            About <span className="text-[#625FFC]">Garuda Forge</span>
           </h1>
           <p className="text-gray-400 text-base sm:text-lg max-w-md mx-auto md:mx-0">
             We are a team of builders, problem solvers, and innovators
