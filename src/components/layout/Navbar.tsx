@@ -12,11 +12,11 @@ export const Navbar = () => {
       <div className="max-w-300 mx-auto px-6 py-8 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Image
-            src="/eagle-logo.png"
+            src="/hero-eagle.png"
             alt="Garuda Forge Logo"
             width={50}
             height={50}
-            className="object-contain"
+            className="w-auto h-auto object-contain"
           />
 
           <div className="flex flex-col items-start leading-none">

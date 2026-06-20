@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
+  --color-brand-light: #ffffff;
   --color-brand-dark: #0b0e14;
   --color-brand-blue: #3b82f6;
   --color-text-main: #ffffff;
@@ -10,5 +11,5 @@
 body {
   background-color: var(--color-brand-dark);
   color: var(--color-text-main);
-  font-family: 'Inter', sans-serif
+  font-family: 'Roboto', sans-serif
 }
