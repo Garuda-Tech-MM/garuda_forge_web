@@ -52,7 +52,7 @@ export const WorkPage = () => {
                 onClick={() => setActiveTab(cat)}
                 className={`shrink-0 px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition whitespace-nowrap ${
                   activeTab === cat
-                    ? "bg-gray-900 text-white"
+                    ? "bg-[#625FFC] text-white"
                     : "text-gray-500 hover:bg-gray-100"
                 }`}
               >
@@ -70,7 +70,7 @@ export const WorkPage = () => {
               className="border border-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 hover:shadow-lg transition bg-white"
             >
               <div className="h-40 sm:h-48 bg-gray-100 rounded-xl sm:rounded-2xl mb-4 sm:mb-6" />
-              <h3 className="text-lg sm:text-xl font-bold mb-1.5 sm:mb-2 text-black">
+              <h3 className="text-lg sm:text-xl font-bold mb-1.5 sm:mb-2 text-gray-900">
                 {p.title}
               </h3>
               <p className="text-gray-500 text-sm mb-4 sm:mb-6">{p.desc}</p>
@@ -78,7 +78,7 @@ export const WorkPage = () => {
                 {p.tags.map((t) => (
                   <span
                     key={t}
-                    className="bg-blue-100 border border-blue-500 text-black px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-md text-[10px]"
+                    className="bg-purple-50 border border-[#625FFC] text-black px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-md text-[12px]"
                   >
                     {t}
                   </span>

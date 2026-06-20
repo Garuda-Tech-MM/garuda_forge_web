@@ -114,7 +114,7 @@ export const Services = () => {
             End-to-End Web Development Solutions
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
-            From idea to launch and beyond, we forge digital products that
+            From idea to launch and beyond, we forge web applications that
             perform, scale, and grow with your business.
           </p>
         </div>
