@@ -1,9 +1,29 @@
 import Image from "next/image";
 import { MessageSquare, ShieldCheck, Zap } from "lucide-react";
+import AnimatedBackground from "../AnimatedBackground";
+
+const contactInfo = [
+  {
+    icon: MessageSquare,
+    text: "Quick Response",
+    sub: "We reply within 24 hours",
+  },
+  {
+    icon: ShieldCheck,
+    text: "Trusted Partner",
+    sub: "Your ideas are safe with us",
+  },
+  {
+    icon: Zap,
+    text: "Results Driven",
+    sub: "Focused on your success",
+  },
+];
 
 export const ContactHero = () => {
   return (
-    <section className="bg-brand-dark pt-12 sm:pt-16 md:pt-20 pb-10 sm:pb-12 md:pb-15 px-4 sm:px-6 text-white overflow-hidden">
+    <section className="relative bg-brand-dark/50 pt-12 sm:pt-16 md:pt-20 pb-10 sm:pb-12 md:pb-15 px-4 sm:px-6 text-white overflow-hidden">
+      <AnimatedBackground className="bg-brand-dark/50 w-full h-full object-cover absolute top-0 left-0 opacity-30" />
       <div className="max-w-300 mx-auto flex flex-col md:flex-row items-center justify-between">
         <div className="md:w-1/2">
           <span className="text-[#625FFC] font-bold uppercase tracking-widest text-sm mb-4 block">
@@ -19,23 +39,7 @@ export const ContactHero = () => {
           </p>
 
           <div className="flex gap-6">
-            {[
-              {
-                icon: MessageSquare,
-                text: "Quick Response",
-                sub: "We reply within 24 hours",
-              },
-              {
-                icon: ShieldCheck,
-                text: "Trusted Partner",
-                sub: "Your ideas are safe with us",
-              },
-              {
-                icon: Zap,
-                text: "Results Driven",
-                sub: "Focused on your success",
-              },
-            ].map((item, i) => (
+            {contactInfo.map((item, i) => (
               <div
                 key={i}
                 className="flex items-center gap-3 bg-[#151921] p-4 rounded-xl border border-gray-800"
@@ -43,14 +47,14 @@ export const ContactHero = () => {
                 <item.icon className="text-[#625FFC]" />
                 <div>
                   <p className="font-bold text-sm">{item.text}</p>
-                  <p className="text-[12px] text-gray-500">{item.sub}</p>
+                  <p className="text-[12px] text-gray-400">{item.sub}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+        <div className=" relative w-full md:w-1/2 flex justify-center md:justify-end">
           <Image
             src="/hero-eagle.png"
             alt="Garuda Forge Logo"

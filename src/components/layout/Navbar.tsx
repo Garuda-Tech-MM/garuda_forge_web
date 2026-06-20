@@ -20,7 +20,7 @@ export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-brand-dark w-full">
+    <nav className="bg-brand-dark/70 w-full">
       <div className="max-w-300 mx-auto px-4 sm:px-6 py-4 sm:py-6 lg:py-8 flex items-center justify-between">
         <Link
           href="/"

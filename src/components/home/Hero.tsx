@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import AnimatedBackground from "../AnimatedBackground";
 
 export const Hero = () => {
   return (
-    <section className="relative w-full bg-brand-dark pt-12 sm:pt-16 lg:pt-20 pb-16 sm:pb-24 lg:pb-32 overflow-hidden">
+    <section className="relative w-fullpt-12 sm:pt-16 lg:pt-20 pb-16 sm:pb-24 lg:pb-32 overflow-hidden">
+      <AnimatedBackground className="bg-brand-dark/50 w-full h-full object-cover absolute top-0 left-0 opacity-30" />
       {/* Container */}
       <div className="max-w-300 mx-auto px-4 sm:px-6 flex flex-col lg:flex-row items-center relative z-10">
         {/* Content */}

@@ -2,9 +2,24 @@
 
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
+const contactInfo = [
+  { icon: Mail, label: "Email", val: "garudaforge.tech@gmail.com" },
+  {
+    icon: Phone,
+    label: "Phone",
+    val: "+95 925 249 4454 / +95 979 355 8834",
+  },
+  { icon: MapPin, label: "Location", val: "Yangon | Myanmar" },
+  {
+    icon: Clock,
+    label: "Business Hours",
+    val: "Mon - Fri, 9:00 AM - 5:00 PM (UTC+6:30)",
+  },
+];
+
 export const ContactPage = () => {
   return (
-    <div className="bg-brand-dark text-white">
+    <div className="bg-brand-dark/50 text-white">
       <section className="bg-white text-gray-900 py-20 px-6">
         <div className="max-w-300 mx-auto grid md:grid-cols-3 gap-12">
           {/* Contact Info */}
@@ -14,20 +29,7 @@ export const ContactPage = () => {
               Fill out the form and our team will get back to you as soon as
               possible.
             </p>
-            {[
-              { icon: Mail, label: "Email", val: "garudaforge.tech@gmail.com" },
-              {
-                icon: Phone,
-                label: "Phone",
-                val: "+95 925 249 4454 / +95 9 77777777",
-              },
-              { icon: MapPin, label: "Location", val: "Yangon | Myanmar" },
-              {
-                icon: Clock,
-                label: "Business Hours",
-                val: "Mon - Fri, 9:00 AM - 5:00 PM (UTC+6:30)",
-              },
-            ].map((item, i) => (
+            {contactInfo.map((item, i) => (
               <div key={i} className="flex gap-4">
                 <item.icon className="text-[#625FFC]" />
                 <div>

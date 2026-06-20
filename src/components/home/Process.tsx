@@ -27,7 +27,7 @@ export const Process = () => {
   ];
 
   return (
-    <section className="bg-brand-dark py-16 sm:py-20 md:py-24 w-full text-white">
+    <section className="bg-brand-dark/50 py-16 sm:py-20 md:py-24 w-full text-white">
       <div className="max-w-250 mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16 md:mb-24">
           <span className="text-[#625FFC] font-bold text-lg tracking-widest uppercase mb-3 block">

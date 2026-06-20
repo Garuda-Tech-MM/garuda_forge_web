@@ -62,7 +62,7 @@ const socialLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="bg-brand-dark text-white py-12 sm:py-14 md:py-16">
+    <footer className="bg-brand-dark/70 text-white py-12 sm:py-14 md:py-16">
       <div className="max-w-300 mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 sm:gap-12 mb-12 sm:mb-16">
           {/* Logo & About */}
