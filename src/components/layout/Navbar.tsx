@@ -1,43 +1,52 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
+
+const navItems = [
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/services" },
+  { name: "Work", href: "/work" },
+  { name: "About Us", href: "/about" },
+  { name: "Tech Stack", href: "/tech-stack" },
+  { name: "Blog", href: "/blog" },
+];
 
 export const Navbar = () => {
   const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="bg-brand-dark w-full">
-      <div className="max-w-300 mx-auto px-6 py-8 flex items-center justify-between">
-        <div className="flex items-center gap-3">
+      <div className="max-w-300 mx-auto px-4 sm:px-6 py-4 sm:py-6 lg:py-8 flex items-center justify-between">
+        <Link
+          href="/"
+          className="flex items-center gap-2 sm:gap-3"
+          onClick={() => setMenuOpen(false)}
+        >
           <Image
             src="/hero-eagle.png"
             alt="Garuda Forge Logo"
             width={50}
             height={50}
-            className="w-auto h-auto object-contain"
+            className="w-10 h-10 sm:w-auto sm:h-auto object-contain"
           />
 
           <div className="flex flex-col items-start leading-none">
-            <span className="text-white font-bold text-lg tracking-[0.2em]">
+            <span className="text-white font-bold text-base sm:text-lg tracking-[0.2em]">
               GARUDA
             </span>
-            <span className="text-blue-800 font-bold text-[12px] tracking-[1.1em]">
+            <span className="text-blue-800 font-bold text-[10px] sm:text-[12px] tracking-[0.8em] sm:tracking-[1.1em]">
               FORGE
             </span>
           </div>
-        </div>
+        </Link>
 
-        <div className="flex items-center gap-8 text-sm text-gray-400">
-          {[
-            { name: "Home", href: "/" },
-            { name: "Services", href: "/services" },
-            { name: "Work", href: "/work" },
-            { name: "About Us", href: "/about" },
-            { name: "Tech Stack", href: "/tech-stack" },
-            { name: "Blog", href: "/blog" },
-          ].map((item) => {
+        <div className="hidden lg:flex items-center gap-8 text-sm text-gray-400">
+          {navItems.map((item) => {
             const isActive = pathname === item.href;
             return (
               <Link
@@ -60,10 +69,47 @@ export const Navbar = () => {
           })}
         </div>
 
-        <button className="border border-blue-300 text-white px-6 py-2 rounded-md text-sm hover:border-white transition">
+        <button className="hidden lg:block border border-blue-300 text-white px-6 py-2 rounded-md text-sm hover:border-white transition">
           Let&apos;s Talk →
         </button>
+
+        <button
+          type="button"
+          className="lg:hidden text-white p-2 -mr-2"
+          onClick={() => setMenuOpen((open) => !open)}
+          aria-expanded={menuOpen}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+        >
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
+
+      {menuOpen && (
+        <div className="lg:hidden border-t border-gray-800 bg-brand-dark">
+          <div className="max-w-300 mx-auto px-4 sm:px-6 py-6 flex flex-col gap-1">
+            {navItems.map((item) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
+                  className={`px-3 py-3 rounded-lg text-sm transition ${
+                    isActive
+                      ? "text-blue-600 bg-blue-600/10"
+                      : "text-gray-400 hover:text-white hover:bg-white/5"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
+            <button className="mt-4 w-full border border-blue-300 text-white px-6 py-3 rounded-md text-sm hover:border-white transition">
+              Let&apos;s Talk →
+            </button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

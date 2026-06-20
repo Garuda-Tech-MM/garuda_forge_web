@@ -103,8 +103,8 @@ export const Services = () => {
   ];
 
   return (
-    <section className="bg-brand-light py-24 w-full">
-      <div className="max-w-300 mx-auto px-6">
+    <section className="bg-brand-light py-16 sm:py-20 md:py-24 w-full">
+      <div className="max-w-300 mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center flex flex-col items-center">
           <span className="text-blue-600 font-bold text-xs tracking-widest uppercase mb-3">

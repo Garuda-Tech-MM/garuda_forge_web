@@ -9,18 +9,18 @@ export const Work = () => {
   ];
 
   return (
-    <section className="bg-brand-light pt-20 w-full">
-      <div className="max-w-300 mx-auto px-6">
-        <div className="text-center mb-16">
+    <section className="bg-brand-light pt-12 sm:pt-16 md:pt-20 w-full">
+      <div className="max-w-300 mx-auto px-4 sm:px-6">
+        <div className="text-center mb-10 sm:mb-14 md:mb-16">
           <span className="text-blue-600 font-bold text-xs tracking-widest uppercase mb-3 block">
             Our Work
           </span>
-          <h2 className="text-4xl font-bold text-gray-900">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 px-2">
             Built with Purpose. Designed to Perform.
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 mb-10 sm:mb-12">
           {projects.map((project, index) => (
             <div key={index} className="group cursor-pointer">
               {/* Card */}
