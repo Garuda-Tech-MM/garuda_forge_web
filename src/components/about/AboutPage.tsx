@@ -1,5 +1,6 @@
 import { Target, Users, ShieldCheck, TrendingUp } from "lucide-react";
 import { ContactBanner } from "../layout/ContactBanner";
+import Image from "next/image";
 
 export const AboutPage = () => {
   return (
@@ -20,7 +21,15 @@ export const AboutPage = () => {
             deliver products that users love and bussiness rely on.
           </p>
         </div>
-        <div className="h-64 bg-gray-200 rounded-3xl" /> {/* Image */}
+        <div className="h-64 bg-gray-200 rounded-3xl">
+          <Image
+            src="/team-photo.png"
+            alt="Team"
+            width={400}
+            height={300}
+            className="w-full h-full object-cover"
+          />
+        </div>
       </section>
 
       {/* 3. Stats Section */}

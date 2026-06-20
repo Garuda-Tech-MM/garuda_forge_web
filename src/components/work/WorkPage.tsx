@@ -1,36 +1,26 @@
 "use client";
 import { useState } from "react";
 import { ContactBanner } from "../layout/ContactBanner";
+import Image from "next/image";
 
 const projects = [
   {
-    title: "Nexora",
+    title: "Unlock Wealth Digital",
     desc: "Analytics dashboard for businesses.",
-    tags: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
-    category: "SaaS",
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+    category: "Website",
+    image: "/projects/unlockwdigital.png",
   },
   {
-    title: "Leafy",
-    desc: "E-commerce store for plants & decor.",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    category: "E-Commerce",
-  },
-  {
-    title: "Taskly",
-    desc: "AI-Powered Workflow Automation.",
-    tags: ["Next.js", "NestJS", "PostgreSQL", "Redis"],
-    category: "SaaS",
+    title: "Thet Aung",
+    desc: "Optical Management System",
+    tags: ["React Native", "Expo", "SQLite"],
+    category: "Mobile App",
+    image: "/projects/thet_aung.png",
   },
 ];
 
-const categories = [
-  "All",
-  "Web Application",
-  "E-Commerce",
-  "SaaS",
-  "Corporate",
-  "API / Integration",
-];
+const categories = ["All", "Website", "Web App", "Mobile App"];
 
 export const WorkPage = () => {
   const [activeTab, setActiveTab] = useState("All");
@@ -69,7 +59,15 @@ export const WorkPage = () => {
               key={p.title}
               className="border border-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 hover:shadow-lg transition bg-white"
             >
-              <div className="h-40 sm:h-48 bg-gray-100 rounded-xl sm:rounded-2xl mb-4 sm:mb-6" />
+              <div className="h-40 sm:h-48 bg-gray-100 rounded-xl sm:rounded-2xl mb-4 sm:mb-6">
+                <Image
+                  src={p.image}
+                  alt={p.title}
+                  width={400}
+                  height={240}
+                  className="w-full h-full object-obtain transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
               <h3 className="text-lg sm:text-xl font-bold mb-1.5 sm:mb-2 text-black">
                 {p.title}
               </h3>
