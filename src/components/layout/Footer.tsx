@@ -1,3 +1,6 @@
+import Link from "next/link";
+import Image from "next/image";
+
 const socialLinks = [
   {
     label: "Facebook",
@@ -64,7 +67,24 @@ export const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 sm:gap-12 mb-12 sm:mb-16">
           {/* Logo & About */}
           <div className="col-span-1 sm:col-span-2">
-            <h2 className="text-2xl font-bold mb-6">Garuda Forge</h2>
+            <Link href="/" className="flex items-center gap-2 sm:gap-3 mb-6">
+              <Image
+                src="/hero-eagle.png"
+                alt="Garuda Forge Logo"
+                width={50}
+                height={50}
+                className="w-10 h-10 sm:w-auto sm:h-auto object-contain"
+              />
+
+              <div className="flex flex-col items-start leading-none">
+                <span className="text-white font-bold text-base sm:text-lg tracking-[0.2em]">
+                  GARUDA
+                </span>
+                <span className="text-[#625FFC] font-bold text-[10px] sm:text-[12px] tracking-[0.8em] sm:tracking-[1.1em]">
+                  FORGE
+                </span>
+              </div>
+            </Link>
             <p className="text-gray-400 max-w-sm leading-relaxed">
               We build high-performance web solutions for businesses that want
               to scale and succeed in the digital world.
@@ -97,7 +117,7 @@ export const Footer = () => {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="hover:text-blue-500 transition-colors"
+                  className="hover:text-[#625FFC] transition-colors"
                 >
                   {icon}
                 </a>

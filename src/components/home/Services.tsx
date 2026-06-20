@@ -6,7 +6,7 @@ export const Services = () => {
         "Tailored web applications built with modern technologies to match your unique needs.",
       icon: (
         <svg
-          className="w-8 h-8 text-blue-600"
+          className="w-8 h-8 text-[#625FFC]"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -26,7 +26,7 @@ export const Services = () => {
         "High-performing online stores designed to convert visitors into loyal customers.",
       icon: (
         <svg
-          className="w-8 h-8 text-blue-600"
+          className="w-8 h-8 text-[#625FFC]"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -46,7 +46,7 @@ export const Services = () => {
         "Lightning-fast websites optimized for speed, SEO, and core web vitals.",
       icon: (
         <svg
-          className="w-8 h-8 text-blue-600"
+          className="w-8 h-8 text-[#625FFC]"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -66,7 +66,7 @@ export const Services = () => {
         "Pixel-perfect, mobile-first designs that deliver seamless experiences.",
       icon: (
         <svg
-          className="w-8 h-8 text-blue-600"
+          className="w-8 h-8 text-[#625FFC]"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -86,7 +86,7 @@ export const Services = () => {
         "Ongoing support and maintenance to keep your website secure and up-to-date.",
       icon: (
         <svg
-          className="w-8 h-8 text-blue-600"
+          className="w-8 h-8 text-[#625FFC]"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -107,7 +107,7 @@ export const Services = () => {
       <div className="max-w-300 mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center flex flex-col items-center">
-          <span className="text-blue-600 font-bold text-xs tracking-widest uppercase mb-3">
+          <span className="text-[#625FFC] font-bold text-lg tracking-widest uppercase mb-3">
             Our Services
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -127,15 +127,15 @@ export const Services = () => {
               className="bg-white rounded-2xl p-8 flex flex-col items-center text-center border border-gray-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.1)] transition-shadow duration-300"
             >
               {/* Icon Container */}
-              <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-6">
+              <div className="w-16 h-16 rounded-2xl bg-purple-50 flex items-center justify-center mb-6">
                 {service.icon}
               </div>
 
               {/* Text */}
-              <h3 className="text-[15px] font-bold text-gray-900 mb-3 leading-snug">
+              <h3 className="text-base md:text-lg font-bold text-gray-900 mb-3 leading-snug">
                 {service.title}
               </h3>
-              <p className="text-[13px] text-gray-500 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-500 leading-relaxed">
                 {service.description}
               </p>
             </div>

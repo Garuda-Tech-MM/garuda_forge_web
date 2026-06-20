@@ -28,7 +28,7 @@ export const ContactBanner = () => {
 
         <Link
           href="/contact"
-          className="w-full md:w-auto shrink-0 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3.5 sm:py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all"
+          className="w-full md:w-auto shrink-0 bg-[#625FFC] hover:bg-[#4a4dc8] text-white px-8 py-3.5 sm:py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all"
         >
           Let&apos;s Talk <span>→</span>
         </Link>

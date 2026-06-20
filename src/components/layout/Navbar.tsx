@@ -39,7 +39,7 @@ export const Navbar = () => {
             <span className="text-white font-bold text-base sm:text-lg tracking-[0.2em]">
               GARUDA
             </span>
-            <span className="text-blue-800 font-bold text-[10px] sm:text-[12px] tracking-[0.8em] sm:tracking-[1.1em]">
+            <span className="text-[#625FFC] font-bold text-[10px] sm:text-[12px] tracking-[0.8em] sm:tracking-[1.1em]">
               FORGE
             </span>
           </div>
@@ -53,15 +53,15 @@ export const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 className={`relative transition-colors focus-visible:text-white focus:text-white active:text-white ${
-                  isActive ? "text-blue-600" : "hover:text-white"
+                  isActive ? "text-[#625FFC]" : "hover:text-white"
                 }`}
               >
                 {item.name}
 
                 {isActive && (
                   <span className="absolute -bottom-1.5 left-0 w-full flex items-center justify-center">
-                    <span className="w-full h-0.5 bg-blue-600 rounded-full"></span>
-                    <span className="absolute w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+                    <span className="w-full h-0.5 bg-[#625FFC] rounded-full"></span>
+                    <span className="absolute w-1.5 h-1.5 bg-[#625FFC] rounded-full"></span>
                   </span>
                 )}
               </Link>
@@ -71,7 +71,7 @@ export const Navbar = () => {
 
         <Link
           href="/contact"
-          className="hidden lg:block border border-blue-300 text-white px-6 py-2 rounded-md text-sm hover:border-white focus-visible:border-white active:border-white transition"
+          className="hidden lg:block border border-[#625FFC] text-white px-6 py-2 rounded-md text-sm hover:border-white focus-visible:border-white active:border-white transition"
         >
           Let&apos;s Talk →
         </Link>
@@ -99,7 +99,7 @@ export const Navbar = () => {
                   onClick={() => setMenuOpen(false)}
                   className={`px-3 py-3 rounded-lg text-sm transition-colors focus-visible:text-white focus:text-white active:text-white ${
                     isActive
-                      ? "text-blue-600 bg-blue-600/10"
+                      ? "text-[#625FFC] bg-[#625FFC]/10"
                       : "text-gray-400 hover:text-white hover:bg-white/5 active:bg-white/10"
                   }`}
                 >
@@ -110,7 +110,7 @@ export const Navbar = () => {
 
             <Link
               href="/contact"
-              className="mt-4 w-full border border-blue-300 text-white px-6 py-3 rounded-md text-sm hover:border-white focus-visible:border-white active:border-white transition flex items-center justify-center text-center"
+              className="mt-4 w-full border border-[#625FFC] text-white px-6 py-3 rounded-md text-sm hover:cursor-pointer hover:border-white focus-visible:border-white active:border-white transition flex items-center justify-center text-center"
             >
               Let&apos;s Talk →
             </Link>
