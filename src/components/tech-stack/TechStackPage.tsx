@@ -54,16 +54,16 @@ const techStack = [
         image: "expressjs.svg",
       },
       {
-        name: "Laravel",
-        description:
-          "Elegant PHP framework for building secure and scalable web applications.",
-        image: "laravel.svg",
-      },
-      {
         name: "PHP",
         description:
           "Powerful server-side scripting language for dynamic and reliable applications.",
         image: "php.svg",
+      },
+      {
+        name: "Laravel",
+        description:
+          "Elegant PHP framework for building secure and scalable web applications.",
+        image: "laravel.svg",
       },
       {
         name: "MySQL",
