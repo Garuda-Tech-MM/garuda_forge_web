@@ -12,7 +12,7 @@ const navItems = [
   { name: "Work", href: "/work" },
   { name: "About Us", href: "/about" },
   { name: "Tech Stack", href: "/tech-stack" },
-  { name: "Blog", href: "/blog" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export const Navbar = () => {
@@ -69,9 +69,12 @@ export const Navbar = () => {
           })}
         </div>
 
-        <button className="hidden lg:block border border-blue-300 text-white px-6 py-2 rounded-md text-sm hover:border-white focus-visible:border-white active:border-white transition">
+        <Link
+          href="/contact"
+          className="hidden lg:block border border-blue-300 text-white px-6 py-2 rounded-md text-sm hover:border-white focus-visible:border-white active:border-white transition"
+        >
           Let&apos;s Talk →
-        </button>
+        </Link>
 
         <button
           type="button"
@@ -104,9 +107,13 @@ export const Navbar = () => {
                 </Link>
               );
             })}
-            <button className="mt-4 w-full border border-blue-300 text-white px-6 py-3 rounded-md text-sm hover:border-white focus-visible:border-white active:border-white transition">
+
+            <Link
+              href="/contact"
+              className="mt-4 w-full border border-blue-300 text-white px-6 py-3 rounded-md text-sm hover:border-white focus-visible:border-white active:border-white transition flex items-center justify-center text-center"
+            >
               Let&apos;s Talk →
-            </button>
+            </Link>
           </div>
         </div>
       )}

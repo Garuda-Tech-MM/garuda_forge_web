@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export const ContactBanner = () => {
@@ -25,9 +26,12 @@ export const ContactBanner = () => {
           </div>
         </div>
 
-        <button className="w-full md:w-auto shrink-0 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3.5 sm:py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all">
+        <Link
+          href="/contact"
+          className="w-full md:w-auto shrink-0 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3.5 sm:py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all"
+        >
           Let&apos;s Talk <span>→</span>
-        </button>
+        </Link>
       </div>
     </section>
   );

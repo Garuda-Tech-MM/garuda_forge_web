@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
@@ -23,12 +24,19 @@ export const Hero = () => {
 
           {/* Call To Action Buttons */}
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
-            <button className="bg-blue-600 text-white px-7 py-3 rounded-md font-medium hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
+            <Link
+              href="/contact"
+              className="bg-blue-600 text-white px-7 py-3 rounded-md font-medium hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
+            >
               Let&apos;s Build Together <span>→</span>
-            </button>
-            <button className="border border-gray-600 text-white px-7 py-3 rounded-md font-medium hover:border-white transition-colors">
+            </Link>
+
+            <Link
+              href="/work"
+              className="border border-gray-600 text-white px-7 py-3 rounded-md font-medium hover:border-white transition-colors"
+            >
               View Our Work
-            </button>
+            </Link>
           </div>
 
           {/* Trust Badges */}
