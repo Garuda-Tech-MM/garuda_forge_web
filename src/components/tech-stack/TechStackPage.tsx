@@ -25,13 +25,13 @@ const techStack = [
         image: "typescript.svg",
       },
       {
-        name: "Tailwind CSS",
+        name: "Tailwind",
         description:
           "Utility-first CSS framework for rapid UI development and consistency.",
         image: "tailwind.svg",
       },
       {
-        name: "Redux Toolkit",
+        name: "Redux",
         description:
           "Predictable state management for React applications at any scale.",
         image: "redux.svg",
@@ -51,7 +51,7 @@ const techStack = [
         name: "Express",
         description:
           "Minimal and flexible Node.js web framework for robust APIs and services.",
-        image: "express.svg",
+        image: "expressjs.svg",
       },
       {
         name: "Laravel",
@@ -77,7 +77,7 @@ const techStack = [
     heading: "Tools & DevOps",
     technologies: [
       {
-        name: "Git & GitHub",
+        name: "GitHub",
         description:
           "Version control and collaboration to streamline development workflows.",
         image: "github.svg",
@@ -108,7 +108,7 @@ const techStack = [
       },
     ],
   },
-]
+];
 
 export const TechStackPage = () => {
   return (
@@ -127,40 +127,38 @@ export const TechStackPage = () => {
           </p>
         </div>
         {/* Project Grid */}
-        {
-          techStack.map((stack) => (
-            <div key={stack.heading} className="mb-10 sm:mb-14 md:mb-20">
-              <h3 className="text-gray-900 text-xl sm:text-2xl font-bold mb-6">
-                {stack.heading}
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 sm:gap-6 md:gap-8 mb-16 sm:mb-20 md:mb-24">
-                {stack.technologies.map((tech) => (
-                  <div
-                    key={tech.name}
-                    className="border border-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 hover:shadow-lg transition bg-white"
-                  >
-                    <div className="flex gap-5 items-center">
-                      <div className="w-12 h-12 mb-3">
-                        <Image
-                          src={tech.image}
-                          alt={tech.name}
-                          width={200}
-                          height={200}
-                          className="w-full h-auto object-contain"
-                          priority
-                        />
-                      </div>
-                        <h4 className="lg:text-lg text-gray-900 font-bold mb-1.5 sm:mb-2">
-                          {tech.name}
-                        </h4>
+        {techStack.map((stack) => (
+          <div key={stack.heading} className="mb-10 sm:mb-14 md:mb-20">
+            <h3 className="text-gray-900 text-xl sm:text-2xl font-bold mb-6">
+              {stack.heading}
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 sm:gap-6 md:gap-8 mb-16 sm:mb-20 md:mb-24">
+              {stack.technologies.map((tech) => (
+                <div
+                  key={tech.name}
+                  className="border border-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 hover:shadow-lg transition bg-white"
+                >
+                  <div className="flex gap-5 items-center">
+                    <div className="w-12 h-12 mb-3">
+                      <Image
+                        src={tech.image}
+                        alt={tech.name}
+                        width={200}
+                        height={200}
+                        className="w-full h-auto object-contain"
+                        priority
+                      />
                     </div>
-                        <p className="text-gray-500 text-sm">{tech.description}</p>
+                    <h4 className="lg:text-lg text-gray-900 font-bold mb-1.5 sm:mb-2">
+                      {tech.name}
+                    </h4>
                   </div>
-                ))}
-              </div>
+                  <p className="text-gray-500 text-sm">{tech.description}</p>
+                </div>
+              ))}
             </div>
-          ))
-        }
+          </div>
+        ))}
 
         <ContactBanner />
       </div>
