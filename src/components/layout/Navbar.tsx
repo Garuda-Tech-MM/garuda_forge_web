@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { useEffect } from "react";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -18,9 +19,20 @@ const navItems = [
 export const Navbar = () => {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="bg-brand-dark/70 w-full">
+    <nav
+      className={`fixed w-full z-50 top-0 transition-all duration-300 ${isScrolled ? "bg-brand-dark backdrop-blur-lg shadow-lg" : "bg-brand-dark/70 "}`}
+    >
       <div className="max-w-300 mx-auto px-4 sm:px-6 py-4 sm:py-6 lg:py-8 flex items-center justify-between">
         <Link
           href="/"
