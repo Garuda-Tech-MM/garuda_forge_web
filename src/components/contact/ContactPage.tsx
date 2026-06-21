@@ -1,6 +1,8 @@
 "use client";
 
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const contactInfo = [
   { icon: Mail, label: "Email", val: "garudaforge.tech@gmail.com" },
@@ -18,6 +20,36 @@ const contactInfo = [
 ];
 
 export const ContactPage = () => {
+  const form = useRef<HTMLFormElement | null>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!form.current) return;
+
+    const fd = new FormData(form.current);
+    // Honeypot: if this field is filled, likely a bot — abort
+    if (fd.get("last_name")) return;
+
+    const serviceId =
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "SERVICE_ID";
+    const templateId =
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "TEMPLATE_ID";
+    const publicKey =
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "PUBLIC_KEY";
+
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
+      () => {
+        alert("Message sent successfully!");
+        form.current!.reset();
+      },
+      (error) => {
+        // keep it simple — show error message
+        alert("Failed to send message. Please try again later.");
+
+        console.error("EmailJS error:", error);
+      },
+    );
+  };
   return (
     <div className="bg-brand-dark/50 text-white">
       <section className="bg-white text-gray-900 py-20 px-6">
@@ -42,7 +74,7 @@ export const ContactPage = () => {
 
           {/* Form */}
           <div className="md:col-span-2 bg-gray-50 p-8 rounded-3xl border border-gray-100">
-            <form className="space-y-6">
+            <form ref={form} onSubmit={sendEmail} className="space-y-6">
               {/* Name & Email (Grid) */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
@@ -54,11 +86,23 @@ export const ContactPage = () => {
                   </label>
                   <input
                     id="name"
+                    name="from_name"
                     type="text"
                     placeholder="Enter Your Name"
                     className="w-full p-4 rounded-xl border border-gray-200"
+                    required
                   />
                 </div>
+
+                {/* Honeypot field - keep hidden from users */}
+                <input
+                  type="text"
+                  name="last_name"
+                  style={{ display: "none" }}
+                  autoComplete="off"
+                  tabIndex={-1}
+                />
+
                 <div className="flex flex-col gap-2">
                   <label
                     htmlFor="email"
@@ -68,9 +112,11 @@ export const ContactPage = () => {
                   </label>
                   <input
                     id="email"
+                    name="reply_to"
                     type="email"
                     placeholder="Enter Your Email"
                     className="w-full p-4 rounded-xl border border-gray-200"
+                    required
                   />
                 </div>
               </div>
@@ -85,6 +131,7 @@ export const ContactPage = () => {
                 </label>
                 <input
                   id="subject"
+                  name="subject"
                   type="text"
                   placeholder="What is this regrading?"
                   className="w-full p-4 rounded-xl border border-gray-200"
@@ -101,13 +148,17 @@ export const ContactPage = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   placeholder="Tell us about your project or idea..."
                   className="w-full p-4 rounded-xl border border-gray-200 h-32"
                 ></textarea>
               </div>
 
               {/* Submit Button */}
-              <button className="bg-[#625FFC] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#4a4dc8] transition flex items-center gap-2">
+              <button
+                type="submit"
+                className="bg-[#625FFC] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#4a4dc8] transition flex items-center gap-2"
+              >
                 Send Message →
               </button>
             </form>
