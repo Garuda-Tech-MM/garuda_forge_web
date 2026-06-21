@@ -1,8 +1,10 @@
 "use client";
 
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
-import React, { useRef } from "react";
+import { Mail, Phone, MapPin, Clock, ArrowRightIcon } from "lucide-react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { createPortal } from "react-dom";
+import ContactSuccessMessage from "./ContactSuccessMessage";
 
 const contactInfo = [
   { icon: Mail, label: "Email", val: "garudaforge.tech@gmail.com" },
@@ -19,8 +21,12 @@ const contactInfo = [
   },
 ];
 
+const TIME_TO_SHOW_MESSAGE = 6000;
+
 export const ContactPage = () => {
   const form = useRef<HTMLFormElement | null>(null);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [disableForm, setDisableForm] = useState(false);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -37,21 +43,36 @@ export const ContactPage = () => {
     const publicKey =
       process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "PUBLIC_KEY";
 
-    emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
-      () => {
-        alert("Message sent successfully!");
-        form.current!.reset();
-      },
-      (error) => {
-        // keep it simple — show error message
-        alert("Failed to send message. Please try again later.");
+    setDisableForm(true);
 
-        console.error("EmailJS error:", error);
-      },
-    );
+    emailjs
+      .sendForm(serviceId, templateId, form.current, publicKey)
+      .then(
+        () => {
+          form.current!.reset();
+
+          setShowSuccessMessage(true);
+          setTimeout(() => setShowSuccessMessage(false), TIME_TO_SHOW_MESSAGE);
+        },
+        (error) => {
+          // keep it simple — show error message
+          alert("Failed to send message. Please try again later.");
+
+          console.error("EmailJS error:", error);
+        },
+      )
+      .finally(() => {
+        setDisableForm(false);
+      });
   };
+
   return (
-    <div className="bg-brand-dark/50 text-white">
+    <div className="relative bg-brand-dark/50 text-white">
+      {showSuccessMessage &&
+        createPortal(
+          <ContactSuccessMessage visibleStatus={showSuccessMessage} />,
+          window.document.body,
+        )}
       <section className="bg-white text-gray-900 py-20 px-6">
         <div className="max-w-300 mx-auto grid md:grid-cols-3 gap-12">
           {/* Contact Info */}
@@ -157,9 +178,10 @@ export const ContactPage = () => {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="bg-[#625FFC] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#4a4dc8] transition flex items-center gap-2"
+                disabled={disableForm}
+                className="bg-[#625FFC] text-white px-8 py-4 rounded-xl font-bold hover:cursor-pointer hover:bg-[#4a4dc8] transition flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message →
+                Send Message <ArrowRightIcon />
               </button>
             </form>
           </div>
