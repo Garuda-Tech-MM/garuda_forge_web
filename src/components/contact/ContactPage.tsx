@@ -94,14 +94,14 @@ export const ContactPage = () => {
           </div>
 
           {/* Form */}
-          <div className="md:col-span-2 bg-gray-50 p-8 rounded-3xl border border-gray-100">
+          <div className="md:col-span-2 bg-brand-dark p-8 rounded-3xl border border-gray-100 text-white">
             <form ref={form} onSubmit={sendEmail} className="space-y-6">
               {/* Name & Email (Grid) */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
                   <label
                     htmlFor="name"
-                    className="text-sm font-semibold text-gray-700"
+                    className="text-sm font-semibold text-[#625FFC]"
                   >
                     Name
                   </label>
@@ -110,7 +110,7 @@ export const ContactPage = () => {
                     name="from_name"
                     type="text"
                     placeholder="Enter Your Name"
-                    className="w-full p-4 rounded-xl border border-gray-200"
+                    className="w-full p-4 rounded-xl border border-purple-100 focus:ring-2 focus:ring-[#625FFC] focus:outline-none"
                     required
                   />
                 </div>
@@ -127,7 +127,7 @@ export const ContactPage = () => {
                 <div className="flex flex-col gap-2">
                   <label
                     htmlFor="email"
-                    className="text-sm font-semibold text-gray-700"
+                    className="text-sm font-semibold text-[#625FFC]"
                   >
                     Email
                   </label>
@@ -136,7 +136,7 @@ export const ContactPage = () => {
                     name="reply_to"
                     type="email"
                     placeholder="Enter Your Email"
-                    className="w-full p-4 rounded-xl border border-gray-200"
+                    className="w-full p-4 rounded-xl border border-purple-100 focus:ring-2 focus:ring-[#625FFC] focus:outline-none"
                     required
                   />
                 </div>
@@ -146,7 +146,7 @@ export const ContactPage = () => {
               <div className="flex flex-col gap-2">
                 <label
                   htmlFor="subject"
-                  className="text-sm font-semibold text-gray-700"
+                  className="text-sm font-semibold text-[#625FFC]"
                 >
                   Subject
                 </label>
@@ -155,7 +155,7 @@ export const ContactPage = () => {
                   name="subject"
                   type="text"
                   placeholder="What is this regrading?"
-                  className="w-full p-4 rounded-xl border border-gray-200"
+                  className="w-full p-4 rounded-xl border border-purple-100 focus:ring-2 focus:ring-[#625FFC] focus:outline-none"
                 />
               </div>
 
@@ -163,7 +163,7 @@ export const ContactPage = () => {
               <div className="flex flex-col gap-2">
                 <label
                   htmlFor="message"
-                  className="text-sm font-semibold text-gray-700"
+                  className="text-sm font-semibold text-[#625FFC]"
                 >
                   Message
                 </label>
@@ -171,7 +171,7 @@ export const ContactPage = () => {
                   id="message"
                   name="message"
                   placeholder="Tell us about your project or idea..."
-                  className="w-full p-4 rounded-xl border border-gray-200 h-32"
+                  className="w-full p-4 rounded-xl border border-purple-100 focus:ring-2 focus:ring-[#625FFC] focus:outline-none h-32"
                 ></textarea>
               </div>
 
