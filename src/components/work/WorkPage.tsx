@@ -43,7 +43,7 @@ export const WorkPage = () => {
                 className={`shrink-0 px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition whitespace-nowrap ${
                   activeTab === cat
                     ? "bg-[#625FFC] text-white"
-                    : "text-gray-500 hover:bg-gray-100"
+                    : "text-gray-500 hover:bg-gray-100 hover:cursor-pointer"
                 }`}
               >
                 {cat}

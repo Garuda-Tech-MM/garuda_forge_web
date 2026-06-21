@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedBackground from "../AnimatedBackground";
+import { ArrowRightIcon } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -28,9 +29,9 @@ export const Hero = () => {
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="bg-[#625FFC] text-white px-7 py-3 rounded-md font-medium hover:bg-[#4a4dc8] transition-colors flex items-center justify-center gap-2"
+              className="flex items-center justify-center gap-2 bg-[#625FFC] text-white px-7 py-3 rounded-md font-medium hover:bg-[#4a4dc8] transition-colors"
             >
-              Let&apos;s Build Together <span>→</span>
+              Let&apos;s Build Together <ArrowRightIcon />
             </Link>
 
             <Link

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowRightIcon } from "lucide-react";
 
 export const ContactBanner = () => {
   return (
@@ -30,7 +31,7 @@ export const ContactBanner = () => {
           href="/contact"
           className="w-full md:w-auto shrink-0 bg-[#625FFC] hover:bg-[#4a4dc8] text-white px-8 py-3.5 sm:py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all"
         >
-          Let&apos;s Talk <span>→</span>
+          Let&apos;s Talk <ArrowRightIcon />
         </Link>
       </div>
     </section>

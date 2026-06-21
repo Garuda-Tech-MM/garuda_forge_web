@@ -1,11 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
-import { useEffect } from "react";
+import { Menu, X, ArrowRightIcon } from "lucide-react";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -83,9 +82,9 @@ export const Navbar = () => {
 
         <Link
           href="/contact"
-          className="hidden lg:block border border-[#625FFC] text-white px-6 py-2 rounded-md text-sm hover:border-white focus-visible:border-white active:border-white transition"
+          className="hidden lg:flex items-center justify-center gap-1 border border-[#625FFC] text-white px-6 py-2 rounded-md text-sm hover:border-white focus-visible:border-white active:border-white transition"
         >
-          Let&apos;s Talk →
+          Let&apos;s Talk <ArrowRightIcon width={16} height={16} />
         </Link>
 
         <button
@@ -122,9 +121,9 @@ export const Navbar = () => {
 
             <Link
               href="/contact"
-              className="mt-4 w-full border border-[#625FFC] text-white px-6 py-3 rounded-md text-sm hover:cursor-pointer hover:border-white focus-visible:border-white active:border-white transition flex items-center justify-center text-center"
+              className="mt-4 w-full flex items-center justify-center gap-1 text-center border border-[#625FFC] text-white px-6 py-3 rounded-md text-sm hover:cursor-pointer hover:border-white focus-visible:border-white active:border-white transition"
             >
-              Let&apos;s Talk →
+              Let&apos;s Talk <ArrowRightIcon width={16} height={16} />
             </Link>
           </div>
         </div>
