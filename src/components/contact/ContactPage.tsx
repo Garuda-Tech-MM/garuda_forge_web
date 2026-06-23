@@ -55,7 +55,7 @@ export const ContactPage = () => {
           setTimeout(() => setShowSuccessMessage(false), TIME_TO_SHOW_MESSAGE);
         },
         (error) => {
-          // keep it simple — show error message
+          // keep it simple—show error message
           alert("Failed to send message. Please try again later.");
 
           console.error("EmailJS error:", error);
