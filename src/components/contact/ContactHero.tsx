@@ -26,7 +26,7 @@ export const ContactHero = () => {
       <AnimatedBackground className="bg-brand-dark/50 w-full h-full object-cover absolute top-0 left-0 opacity-30" />
       <div className="max-w-300 mx-auto flex flex-col md:flex-row items-center justify-between">
         <div className="md:w-1/2">
-          <span className="text-[#625FFC] font-bold uppercase tracking-widest text-sm mb-4 block">
+          <span className="text-[#625FFC] font-bold uppercase tracking-widest text-sm mt-10 mb-4 block">
             Get In Touch
           </span>
           <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
