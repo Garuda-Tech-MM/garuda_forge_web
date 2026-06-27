@@ -9,7 +9,7 @@ export const ContactBanner = () => {
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
           <div className="w-14 h-14 sm:w-16 sm:h-16 shrink-0 flex items-center justify-center">
             <Image
-              src="/hero-eagle.png"
+              src="/logo/logo-mahogany-transparent.png"
               alt="Garuda Forge Logo"
               width={50}
               height={50}
