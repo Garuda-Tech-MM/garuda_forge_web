@@ -69,7 +69,7 @@ export const Footer = () => {
           <div className="col-span-1 sm:col-span-2">
             <Link href="/" className="flex items-center gap-2 sm:gap-3 mb-6">
               <Image
-                src="/hero-eagle.png"
+                src="/logo/logo-mahogany-transparent.png"
                 alt="Garuda Forge Logo"
                 width={50}
                 height={50}
