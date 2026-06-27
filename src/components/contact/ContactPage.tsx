@@ -110,7 +110,7 @@ export const ContactPage = () => {
                     name="from_name"
                     type="text"
                     placeholder="Enter Your Name"
-                    className="w-full p-4 rounded-xl border border-brand-red/10 focus:ring-2 focus:ring-brand-red focus:outline-none"
+                    className="w-full p-4 rounded-xl border border-brand-light/30 focus:ring-2 focus:ring-brand-red focus:outline-none"
                     required
                   />
                 </div>
@@ -136,7 +136,7 @@ export const ContactPage = () => {
                     name="reply_to"
                     type="email"
                     placeholder="Enter Your Email"
-                    className="w-full p-4 rounded-xl border border-brand-red/10 focus:ring-2 focus:ring-brand-red focus:outline-none"
+                    className="w-full p-4 rounded-xl border border-brand-light/30 focus:ring-2 focus:ring-brand-red focus:outline-none"
                     required
                   />
                 </div>
@@ -155,7 +155,7 @@ export const ContactPage = () => {
                   name="subject"
                   type="text"
                   placeholder="What is this regrading?"
-                  className="w-full p-4 rounded-xl border border-brand-red/10 focus:ring-2 focus:ring-brand-red focus:outline-none"
+                  className="w-full p-4 rounded-xl border border-brand-light/30 focus:ring-2 focus:ring-brand-red focus:outline-none"
                 />
               </div>
 
@@ -171,7 +171,7 @@ export const ContactPage = () => {
                   id="message"
                   name="message"
                   placeholder="Tell us about your project or idea..."
-                  className="w-full p-4 rounded-xl border border-brand-red/10 focus:ring-2 focus:ring-brand-red focus:outline-none h-32"
+                  className="w-full p-4 rounded-xl border border-brand-light/30 focus:ring-2 focus:ring-brand-red focus:outline-none h-32"
                 ></textarea>
               </div>
 
@@ -179,7 +179,7 @@ export const ContactPage = () => {
               <button
                 type="submit"
                 disabled={disableForm}
-                className="bg-brand-red text-white px-8 py-4 rounded-xl font-bold hover:cursor-pointer hover:bg-brand-red/80 transition flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-brand-red text-white px-8 py-4 rounded-xl font-bold hover:cursor-pointer hover:bg-brand-light hover:text-brand-red transition flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Send Message <ArrowRightIcon />
               </button>
