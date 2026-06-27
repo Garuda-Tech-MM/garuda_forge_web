@@ -26,12 +26,12 @@ function ContactSuccessMessage({
   return (
     <div
       onAnimationEnd={handleAnimationEnd}
-      className={`fixed overflow-hidden top-28 right-3 z-50 flex items-center gap-5 bg-gray-50 text-gray-900 p-5 rounded-xl shadow-lg border-l-4 border-[#625FFC] ${
+      className={`fixed overflow-hidden top-28 right-3 z-50 flex items-center gap-5 bg-gray-50 text-gray-900 p-5 rounded-xl shadow-lg border-l-4 border-brand-red ${
         closing ? "animate-toast-slide-out" : ""
       }`}
     >
-      <div className="bg-[#625FFC10] w-16 h-16 flex justify-center items-center rounded-full">
-        <CheckCircleIcon className="text-[#625FFC]" width={32} height={32} />
+      <div className="bg-brand-red w-16 h-16 flex justify-center items-center rounded-full">
+        <CheckCircleIcon className="text-text-accent" width={32} height={32} />
       </div>
       <div>
         <div className="flex justify-between items-center mb-2">

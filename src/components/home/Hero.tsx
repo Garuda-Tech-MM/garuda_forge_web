@@ -16,7 +16,7 @@ export const Hero = () => {
             <br />
             Experiences That
             <br />
-            <span className="text-[#625FFC]">Take Flight.</span>
+            <span className="text-text-accent">Take Flight.</span>
           </h1>
 
           <p className="mt-4 sm:mt-6 text-gray-400 text-base sm:text-[17px] max-w-120 leading-relaxed">
@@ -29,14 +29,14 @@ export const Hero = () => {
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="flex items-center justify-center gap-2 bg-[#625FFC] text-white px-7 py-3 rounded-md font-medium hover:bg-[#4a4dc8] transition-colors"
+              className="flex items-center justify-center gap-2 bg-brand-red text-white px-7 py-3 rounded-md font-medium hover:bg-brand-light hover:text-brand-red transition-colors duration-300"
             >
               Let&apos;s Build Together <ArrowRightIcon />
             </Link>
 
             <Link
               href="/work"
-              className="border border-gray-600 text-white px-7 py-3 rounded-md font-medium hover:border-white transition-colors"
+              className="text-center border border-gray-600 text-white px-7 py-3 rounded-md font-medium hover:border-white transition-colors duration-300"
             >
               View Our Work
             </Link>

@@ -16,10 +16,10 @@ export const Work = () => {
   ];
 
   return (
-    <section className="bg-brand-light pt-12 sm:pt-16 md:pt-20 w-full">
+    <section className="bg-brand-light mt-25 pt-12 sm:pt-16 md:pt-20 w-full">
       <div className="max-w-300 mx-auto px-4 sm:px-6">
         <div className="text-center mb-10 sm:mb-14 md:mb-16">
-          <span className="text-[#625FFC] font-bold text-lg tracking-widest uppercase mb-3 block">
+          <span className="text-text-accent font-bold text-lg tracking-widest uppercase mb-3 block">
             Our Work
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 px-2">

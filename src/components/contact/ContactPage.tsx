@@ -84,7 +84,7 @@ export const ContactPage = () => {
             </p>
             {contactInfo.map((item, i) => (
               <div key={i} className="flex gap-4">
-                <item.icon className="text-[#625FFC]" />
+                <item.icon className="text-text-accent" />
                 <div>
                   <p className="font-bold text-sm">{item.label}</p>
                   <p className="text-gray-500 text-sm">{item.val}</p>
@@ -101,7 +101,7 @@ export const ContactPage = () => {
                 <div className="flex flex-col gap-2">
                   <label
                     htmlFor="name"
-                    className="text-sm font-semibold text-[#625FFC]"
+                    className="text-sm font-semibold text-text-accent"
                   >
                     Name
                   </label>
@@ -110,7 +110,7 @@ export const ContactPage = () => {
                     name="from_name"
                     type="text"
                     placeholder="Enter Your Name"
-                    className="w-full p-4 rounded-xl border border-purple-100 focus:ring-2 focus:ring-[#625FFC] focus:outline-none"
+                    className="w-full p-4 rounded-xl border border-brand-red/10 focus:ring-2 focus:ring-brand-red focus:outline-none"
                     required
                   />
                 </div>
@@ -127,7 +127,7 @@ export const ContactPage = () => {
                 <div className="flex flex-col gap-2">
                   <label
                     htmlFor="email"
-                    className="text-sm font-semibold text-[#625FFC]"
+                    className="text-sm font-semibold text-text-accent"
                   >
                     Email
                   </label>
@@ -136,7 +136,7 @@ export const ContactPage = () => {
                     name="reply_to"
                     type="email"
                     placeholder="Enter Your Email"
-                    className="w-full p-4 rounded-xl border border-purple-100 focus:ring-2 focus:ring-[#625FFC] focus:outline-none"
+                    className="w-full p-4 rounded-xl border border-brand-red/10 focus:ring-2 focus:ring-brand-red focus:outline-none"
                     required
                   />
                 </div>
@@ -146,7 +146,7 @@ export const ContactPage = () => {
               <div className="flex flex-col gap-2">
                 <label
                   htmlFor="subject"
-                  className="text-sm font-semibold text-[#625FFC]"
+                  className="text-sm font-semibold text-text-accent"
                 >
                   Subject
                 </label>
@@ -155,7 +155,7 @@ export const ContactPage = () => {
                   name="subject"
                   type="text"
                   placeholder="What is this regrading?"
-                  className="w-full p-4 rounded-xl border border-purple-100 focus:ring-2 focus:ring-[#625FFC] focus:outline-none"
+                  className="w-full p-4 rounded-xl border border-brand-red/10 focus:ring-2 focus:ring-brand-red focus:outline-none"
                 />
               </div>
 
@@ -163,7 +163,7 @@ export const ContactPage = () => {
               <div className="flex flex-col gap-2">
                 <label
                   htmlFor="message"
-                  className="text-sm font-semibold text-[#625FFC]"
+                  className="text-sm font-semibold text-text-accent"
                 >
                   Message
                 </label>
@@ -171,7 +171,7 @@ export const ContactPage = () => {
                   id="message"
                   name="message"
                   placeholder="Tell us about your project or idea..."
-                  className="w-full p-4 rounded-xl border border-purple-100 focus:ring-2 focus:ring-[#625FFC] focus:outline-none h-32"
+                  className="w-full p-4 rounded-xl border border-brand-red/10 focus:ring-2 focus:ring-brand-red focus:outline-none h-32"
                 ></textarea>
               </div>
 
@@ -179,7 +179,7 @@ export const ContactPage = () => {
               <button
                 type="submit"
                 disabled={disableForm}
-                className="bg-[#625FFC] text-white px-8 py-4 rounded-xl font-bold hover:cursor-pointer hover:bg-[#4a4dc8] transition flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-brand-red text-white px-8 py-4 rounded-xl font-bold hover:cursor-pointer hover:bg-brand-red/80 transition flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Send Message <ArrowRightIcon />
               </button>

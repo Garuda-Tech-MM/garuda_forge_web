@@ -65,7 +65,7 @@ export const AboutPage = () => {
       {/* 3. Values Section */}
       <section className="py-10 px-6 bg-brand-dark">
         <div className="max-w-300 mx-auto">
-          <h5 className="text-[#625FFC] text-lg text-center uppercase font-bold mb-3">
+          <h5 className="text-text-accent text-lg text-center uppercase font-bold mb-3">
             Our Values
           </h5>
           <h2 className="text-center text-3xl font-bold mb-12">
@@ -79,7 +79,7 @@ export const AboutPage = () => {
               >
                 {/* Icon Container */}
                 <div className="flex gap-3 items-center mb-5">
-                  <div className="flex items-center justify-center w-12 h-12 bg-purple-50 text-[#625FFC] rounded-xl">
+                  <div className="flex items-center justify-center w-12 h-12 bg-bg-light text-text-accent rounded-xl">
                     <item.icon size={24} />
                   </div>
                   <h4 className="font-bold text-lg mb-2">{item.title}</h4>
@@ -103,9 +103,9 @@ export const AboutPage = () => {
           {stats.map((stat, i) => (
             <div
               key={i}
-              className="text-center p-6 bg-purple-50 rounded-2xl border"
+              className="text-center p-6 bg-bg-light rounded-2xl border"
             >
-              <h3 className="text-3xl font-bold text-[#625FFC] tracking-wider">
+              <h3 className="text-3xl font-bold text-text-accent tracking-wider">
                 {stat.val}
               </h3>
               <p className="text-sm text-gray-500 mt-2">{stat.label}</p>

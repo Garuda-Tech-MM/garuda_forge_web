@@ -2,10 +2,13 @@
 
 @theme inline {
   --color-brand-light: #ffffff;
-  --color-brand-dark: #0b0e14;
+  --color-brand-dark: #1f1f1f;
   --color-brand-blue: #3b82f6;
+  --color-brand-red: #7b1e2b;
   --color-text-main: #ffffff;
   --color-text-sub: #9ca3af;
+  --color-text-accent: #bb2236;
+  --color-bg-light: rgba(31, 31, 31, 0.1);
 }
 
 body {

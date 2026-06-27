@@ -80,7 +80,7 @@ export const Footer = () => {
                 <span className="text-white font-bold text-base sm:text-lg tracking-[0.2em]">
                   GARUDA
                 </span>
-                <span className="text-[#625FFC] font-bold text-[10px] sm:text-[12px] tracking-[0.8em] sm:tracking-[1.1em]">
+                <span className="text-text-accent font-bold text-[10px] sm:text-[12px] tracking-[0.8em] sm:tracking-[1.1em]">
                   FORGE
                 </span>
               </div>
@@ -117,7 +117,7 @@ export const Footer = () => {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="hover:text-[#625FFC] transition-colors"
+                  className="hover:text-text-accent transition-colors duration-300"
                 >
                   {icon}
                 </a>
@@ -132,11 +132,14 @@ export const Footer = () => {
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link
               href="/privacy"
-              className="hover:text-white transition-colors"
+              className="hover:text-white transition-colors duration-300"
             >
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-white transition-colors">
+            <Link
+              href="/terms"
+              className="hover:text-white transition-colors duration-300"
+            >
               Terms of Service
             </Link>
           </div>

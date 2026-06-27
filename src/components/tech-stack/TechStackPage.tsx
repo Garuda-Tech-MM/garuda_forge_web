@@ -115,7 +115,7 @@ export const TechStackPage = () => {
     <section className="bg-white py-4 sm:py-8 md:py-12">
       <div className="max-w-300 mx-auto px-4 sm:px-6">
         <div className="text-center mb-10 sm:mb-14 md:mb-20">
-          <h4 className="uppercase text-[#625FFC] text-lg sm:text-xl font-bold mb-2 sm:mb-3">
+          <h4 className="uppercase text-text-accent text-lg sm:text-xl font-bold mb-2 sm:mb-3">
             Our Expertise
           </h4>
           <h2 className="text-gray-900 text-2xl sm:text-3xl font-bold mb-2 sm:mb-3">
