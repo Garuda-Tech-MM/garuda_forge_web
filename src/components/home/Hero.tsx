@@ -60,7 +60,7 @@ export const Hero = () => {
         <div className="w-full lg:w-[45%] mt-10 sm:mt-16 lg:mt-0 relative">
           <div className="relative w-full lg:w-[120%]">
             <Image
-              src="/hero-eagle.png"
+              src="/hero-logo.gif"
               alt="Garuda Glowing Eagle"
               width={500}
               height={500}

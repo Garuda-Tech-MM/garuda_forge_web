@@ -56,7 +56,7 @@ export const ContactHero = () => {
 
         <div className=" relative w-full md:w-1/2 flex justify-center md:justify-end">
           <Image
-            src="/hero-eagle.png"
+            src="/hero-img.gif"
             alt="Garuda Forge Logo"
             width={500}
             height={500}

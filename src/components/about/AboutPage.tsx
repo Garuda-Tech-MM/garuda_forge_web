@@ -51,9 +51,9 @@ export const AboutPage = () => {
             deliver products that users love and bussiness rely on.
           </p>
         </div>
-        <div className="h-64 bg-gray-200 rounded-3xl">
+        <div className="h-100 rounded-3xl">
           <Image
-            src="/team-photo.png"
+            src="/team-img.gif"
             alt="Team"
             width={400}
             height={300}
