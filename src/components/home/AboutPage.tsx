@@ -1,6 +1,6 @@
 import { Target, Users, ShieldCheck, TrendingUp } from "lucide-react";
-import { ContactBanner } from "../layout/ContactBanner";
 import Image from "next/image";
+import AnimatedBackground from "../AnimatedBackground";
 
 const values = [
   {
@@ -25,13 +25,6 @@ const values = [
   },
 ];
 
-const stats = [
-  { label: "Projects Completed", val: "25+" },
-  { label: "Happy Clients", val: "15+" },
-  { label: "Years Experience", val: "4+" },
-  { label: "Team Members", val: "8" },
-];
-
 export const AboutPage = () => {
   return (
     <div className="bg-brand-light">
@@ -43,11 +36,11 @@ export const AboutPage = () => {
           </h2>
           <p className="text-gray-600 mb-4">
             At Garuda Forge, we turn ideas into digital solutions that help
-            businesses grow faster, build high-quality, scable web products and
-            deliver value.
+            businesses grow faster, build high-quality, scalable web products
+            and deliver value.
           </p>
           <p className="text-gray-600 mb-4">
-            We combine modern technologies, clean code and thoughtful desgin to
+            We combine modern technologies, clean code and thoughtful design to
             deliver products that users love and bussiness rely on.
           </p>
         </div>
@@ -63,8 +56,9 @@ export const AboutPage = () => {
       </section>
 
       {/* 3. Values Section */}
-      <section className="py-10 px-6 bg-brand-dark">
-        <div className="max-w-300 mx-auto">
+      <section className="py-30 px-6 bg-brand-dark relative overflow-hidden">
+        <AnimatedBackground className="absolute inset-0 opacity-30" />
+        <div className="max-w-300 mx-auto relative z-10">
           <h5 className="text-text-accent text-lg text-center uppercase font-bold mb-3">
             Our Values
           </h5>
@@ -96,25 +90,6 @@ export const AboutPage = () => {
           </div>
         </div>
       </section>
-
-      {/* 4. Stats Section */}
-      <section className="py-10 px-6">
-        <div className="max-w-300 mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, i) => (
-            <div
-              key={i}
-              className="text-center p-6 bg-bg-light rounded-2xl border"
-            >
-              <h3 className="text-3xl font-bold text-text-accent tracking-wider">
-                {stat.val}
-              </h3>
-              <p className="text-sm text-gray-500 mt-2">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <ContactBanner />
     </div>
   );
 };
